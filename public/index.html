@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Online Multiplayer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu-container">
+        <h1>PONG <span class="online">ONLINE</span></h1>
+        
+        <div class="input-group">
+            <label for="username">Seu Nome de Usuário:</label>
+            <input type="text" id="username" placeholder="Digite seu nome..." maxlength="15">
+        </div>
+
+        <div class="input-group">
+            <label>Cor da sua Raquete:</label>
+            <div class="color-picker">
+                <input type="color" id="paddleColor" value="#007AFF">
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button id="btn-solo" class="btn">Jogar Contra a Máquina</button>
+            <button id="btn-online" class="btn btn-primary">Multiplayer Online</button>
+        </div>
+
+        <p id="status-msg"></p>
+    </div>
+
+    <canvas id="pongCanvas" width="800" height="400" style="display: none;"></canvas>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
